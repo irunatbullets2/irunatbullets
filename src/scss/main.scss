@@ -1,9 +1,13 @@
 @font-face {
-    font-family: 'karmatic_arcaderegular';
-    src: url('../fonts/ka1-webfont.woff2') format('woff2'),
-         url('../fonts/ka1-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Karmatic Arcade';
+	src: url('../fonts/hinted-KarmaticArcade.eot');
+	src: url('../fonts/hinted-KarmaticArcade.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/hinted-KarmaticArcade.woff2') format('woff2'),
+		url('../fonts/hinted-KarmaticArcade.woff') format('woff'),
+		url('../fonts/hinted-KarmaticArcade.ttf') format('truetype'),
+		url('../fonts/hinted-KarmaticArcade.svg#KarmaticArcade') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
@@ -22,23 +26,14 @@ body {
   left: 0;
 }
 
-header {
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 h1 {
-  font-family: 'karmatic_arcaderegular';
+  font-family: 'Karmatic Arcade';
   font-size: 8vw;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: .67em;
+  margin-bottom: .67em;
   text-align: center;
-  @media screen and (min-width: 768px) {
-    margin-top: 0;
-
-  }
 }
 
 img {

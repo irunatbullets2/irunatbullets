@@ -8,7 +8,7 @@
 body {
   background-color: #48FFBD;
   background-image: url(../images/bg.png);
-  background-size: cover;
+  background-size: 100%;
   font-size: 16px;
   font-family: Sans-serif; }
 
@@ -21,12 +21,15 @@ body {
 
 h1 {
   font-family: 'Karmatic Arcade';
-  font-size: 8vw;
+  font-size: 7.8vw;
   font-style: normal;
   font-weight: normal;
-  margin-top: .67em;
-  margin-bottom: .67em;
+  margin-top: .6em;
+  margin-bottom: .6em;
   text-align: center; }
+  @media screen and (min-width: 768px) {
+    h1 {
+      letter-spacing: -2px; } }
 
 img {
   max-width: 80vmax;
@@ -42,6 +45,7 @@ ul {
     ul {
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 20px;
       width: 40%; } }
 
 li {

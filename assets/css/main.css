@@ -5,12 +5,17 @@
   font-weight: normal;
   font-style: normal; }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
 body {
   background-color: #48FFBD;
   background-image: url(../images/bg.png);
   background-size: 100%;
-  font-size: 16px;
-  font-family: Sans-serif; }
+  font-family: Sans-serif;
+  font-size: 16px; }
 
 .placeholder {
   position: absolute;
@@ -65,3 +70,22 @@ a, a:visited {
 
 a:hover, a:focus {
   background-color: #CE1846; }
+
+p {
+  line-height: 22px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+  margin: 0 0 20px; }
+
+article {
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+  padding: 20px; }
+  @media screen and (min-width: 768px) {
+    article {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      width: 40%; } }
+  article :last-child {
+    margin-bottom: 0; }

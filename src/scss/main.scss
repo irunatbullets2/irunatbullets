@@ -17,11 +17,22 @@
 }
 
 body {
+	animation: background-scroll linear 1.5s infinite;
   background-color: #48FFBD;
   background-image: url(../images/bg.png);
   background-size: 100%;
 	font-family: Sans-serif;
   font-size: 16px;
+	transform: translateZ(0);
+}
+
+@keyframes background-scroll {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 0 100%;
+	}
 }
 
 .placeholder {

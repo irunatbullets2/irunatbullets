@@ -88,12 +88,12 @@ article {
   background: rgba(0, 0, 0, 0.25);
   color: #fff;
   text-align: center;
+  margin-bottom: 20px;
   padding: 20px; }
   @media screen and (min-width: 768px) {
     article {
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 20px;
       width: 40%; } }
   article :last-child {
     margin-bottom: 0; }

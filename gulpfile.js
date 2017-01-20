@@ -1,8 +1,9 @@
-var gulp    = require('gulp');
-var webserver = require('gulp-webserver');
-var watch = require('gulp-watch');
-var sass    = require('gulp-sass');
-var prefix  = require('gulp-autoprefixer');
+var gulp    		= require('gulp');
+var webserver 	= require('gulp-webserver');
+var watch 			= require('gulp-watch');
+var sass    		= require('gulp-sass');
+var prefix  		= require('gulp-autoprefixer');
+var cacheBuster = require('gulp-cache-bust');
 
 config = {
 	distPath: './',
@@ -33,9 +34,15 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(config.cssPath));
 });
 
+gulp.task('cacheBuster', ['sass'], function (){
+	return gulp.src('./index.html')
+	.pipe(cacheBuster())
+	.pipe(gulp.dest('.'));
+})
+
 gulp.task('watch', function () {
   'use strict';
-  gulp.watch(config.scssGlob, ['sass']);
+  gulp.watch(config.scssGlob, ['cacheBuster']);
 });
 
-gulp.task('default', ['sass', 'webserver', 'watch']);
+gulp.task('default', ['cacheBuster', 'webserver', 'watch']);
